@@ -1,0 +1,18 @@
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\bin\Debug\IP-Bin.exe
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\bin\Debug\IP-Bin.pdb
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\IP_Bin.Form1.resources
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\IP_Bin.Properties.Resources.resources
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\IP-Bin.exe
+C:\Users\neo\AppData\Local\Temporary Projects\IP-Bin\obj\x86\Debug\IP-Bin.pdb
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\IP-Bin.exe
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\IP-Bin.pdb
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\bin\Debug\IP-Bin.exe
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\bin\Debug\IP-Bin.pdb
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\IP_Bin.Form1.resources
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\IP_Bin.Properties.Resources.resources
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\GenerateResource.write.1.tlog
