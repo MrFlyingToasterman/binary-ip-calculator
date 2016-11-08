@@ -19,11 +19,13 @@ namespace IP_Bin {
         public static int[] ip_b = new int[4];
         public static int[] undefined_snm = new int[4];
         public static int[] sn_m = new int[4];
+        public static int[] wild_card = new int[4];
+        public static int glob_postfix;
 
         private void button1_Click(object sender, EventArgs e) {
             //Convert IP method
             //Check if !empty
-            if (decip_okt0.Text.Equals("") && decip_okt1.Text.Equals("") && decip_okt2.Text.Equals("") && decip_okt3.Text.Equals("")) {
+            if (decip_okt0.Text.Equals("") || decip_okt1.Text.Equals("") || decip_okt2.Text.Equals("") || decip_okt3.Text.Equals("")) {
                 MessageBox.Show("Please set correct values!");
                 return;
             }
@@ -103,8 +105,7 @@ namespace IP_Bin {
             //Convert Subnetmask method
 
             //Check if !empty
-            if (decnm_okt0.Text.Equals("") && decnm_okt1.Text.Equals("") && decnm_okt2.Text.Equals("") && decnm_okt3.Text.Equals(""))
-            {
+            if (decnm_okt0.Text.Equals("") || decnm_okt1.Text.Equals("") || decnm_okt2.Text.Equals("") || decnm_okt3.Text.Equals("")) {
                 MessageBox.Show("Please set correct values!");
                 return;
             }
@@ -119,22 +120,71 @@ namespace IP_Bin {
             int okt3_dec = Convert.ToInt32(decnm_okt3.Text);
             String okt3_bin = tobin(okt3_dec);
 
-            //set to textbox
-            snbinbox.Text = okt0_bin + "." + okt1_bin + "." + okt2_bin + "." + okt3_bin;
-
             //set undefined_snm
             undefined_snm[0] = okt0_dec;
             undefined_snm[1] = okt1_dec;
             undefined_snm[2] = okt2_dec;
             undefined_snm[3] = okt3_dec;
-            
+
+            //check if subnetmask is valid
+            int[] tmp_snm = new int[4];
+            tmp_snm[0] = Convert.ToInt32(okt0_bin);
+            tmp_snm[1] = Convert.ToInt32(okt1_bin);
+            tmp_snm[2] = Convert.ToInt32(okt2_bin);
+            tmp_snm[3] = Convert.ToInt32(okt3_bin);
+            glob_postfix = lint_mask(tmp_snm);
+
+            //set to textbox
+            snbinbox.Text = okt0_bin + "." + okt1_bin + "." + okt2_bin + "." + okt3_bin;
+        }
+
+        public static int lint_mask(int[] subnet_mask) {
+            int postfix = 0;
+            Boolean klackschalter = false;
+
+            for (int i = 0; i < 4; i++) {
+                //string parse = new String(Convert.ToString(subnet_mask[i]).ToArray());
+                String parse = Convert.ToString(subnet_mask[i]);
+                for (int x = 0; x < parse.Length; x++) {
+                    //if (parse[x].Equals("1")) {
+                    // MessageBox.Show("Ausgabe " + parse[x]);
+                    if (parse[x] == '1') {
+                        postfix++;
+                        if (klackschalter == true && parse[x] == '1') {
+                            MessageBox.Show("Invalid Subnetmask! @" + (x + 1) + " okt:" + (i + 1));
+                            return 0;
+                        }
+                    } else {
+                        klackschalter = true;
+                    }
+
+                }
+            }
+            return postfix;
         }
 
         private void addsnm_Click(object sender, EventArgs e) {
+            //Set Postfix
+            postfix_label.Text = "" + glob_postfix;
+
             snm.Text = decnm_okt0.Text + "." + decnm_okt1.Text + "." + decnm_okt2.Text + "." + decnm_okt3.Text;
             mbin.Text = snbinbox.Text;
             //Define undefined_snm as sn_m
             sn_m = undefined_snm;
+            //Set Wildcard
+            wild_card[0] = sn_m[3];
+            wild_card[1] = sn_m[2];
+            wild_card[2] = sn_m[1];
+            wild_card[3] = sn_m[0];
+            wildcard.Text = "";
+            for (int i = 0; i < 4; i++)
+            {
+                wildcard.Text = wildcard.Text + wild_card[i];
+                if (i < 3)
+                {
+                    wildcard.Text = wildcard.Text + ".";
+                }
+            }
         }
 
         private void check_conn_Click(object sender, EventArgs e) {

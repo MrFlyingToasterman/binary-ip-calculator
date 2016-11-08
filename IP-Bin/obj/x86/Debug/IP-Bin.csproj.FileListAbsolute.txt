@@ -16,3 +16,12 @@ C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\I
 C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\IP_Bin.Properties.Resources.resources
 C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\neo\documents\visual studio 2010\Projects\IP-Bin\IP-Bin\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\IP-Bin.exe
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\IP-Bin.pdb
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\IP_Bin.Form1.resources
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\IP_Bin.Properties.Resources.resources
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\binary-ip-culculator\IP-Bin\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\binary-ip-culculator\IP-Bin\bin\Debug\IP-Bin.exe
+H:\binary-ip-culculator\IP-Bin\bin\Debug\IP-Bin.pdb

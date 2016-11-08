@@ -43,6 +43,9 @@
             this.addipb = new System.Windows.Forms.Button();
             this.addipa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.classa = new System.Windows.Forms.Button();
+            this.classb = new System.Windows.Forms.Button();
+            this.classc = new System.Windows.Forms.Button();
             this.addsnm = new System.Windows.Forms.Button();
             this.translate_sn = new System.Windows.Forms.Button();
             this.snbinbox = new System.Windows.Forms.TextBox();
@@ -56,6 +59,8 @@
             this.decnm_okt2 = new System.Windows.Forms.TextBox();
             this.decnm_okt1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.wildcard = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.chainb = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.chaina = new System.Windows.Forms.Label();
@@ -73,9 +78,8 @@
             this.ipa = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.classc = new System.Windows.Forms.Button();
-            this.classb = new System.Windows.Forms.Button();
-            this.classa = new System.Windows.Forms.Button();
+            this.postfix_label = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -237,6 +241,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Subnetmask-Convert";
             // 
+            // classa
+            // 
+            this.classa.Location = new System.Drawing.Point(9, 105);
+            this.classa.Name = "classa";
+            this.classa.Size = new System.Drawing.Size(24, 23);
+            this.classa.TabIndex = 24;
+            this.classa.Text = "A";
+            this.classa.UseVisualStyleBackColor = true;
+            this.classa.Click += new System.EventHandler(this.classa_Click);
+            // 
+            // classb
+            // 
+            this.classb.Location = new System.Drawing.Point(39, 105);
+            this.classb.Name = "classb";
+            this.classb.Size = new System.Drawing.Size(24, 23);
+            this.classb.TabIndex = 23;
+            this.classb.Text = "B";
+            this.classb.UseVisualStyleBackColor = true;
+            this.classb.Click += new System.EventHandler(this.classb_Click);
+            // 
+            // classc
+            // 
+            this.classc.Location = new System.Drawing.Point(69, 105);
+            this.classc.Name = "classc";
+            this.classc.Size = new System.Drawing.Size(24, 23);
+            this.classc.TabIndex = 17;
+            this.classc.Text = "C";
+            this.classc.UseVisualStyleBackColor = true;
+            this.classc.Click += new System.EventHandler(this.classc_Click);
+            // 
             // addsnm
             // 
             this.addsnm.Location = new System.Drawing.Point(158, 105);
@@ -339,6 +373,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.postfix_label);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.wildcard);
+            this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.chainb);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.chaina);
@@ -363,12 +401,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Communication Check";
             // 
+            // wildcard
+            // 
+            this.wildcard.AutoSize = true;
+            this.wildcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wildcard.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.wildcard.Location = new System.Drawing.Point(56, 117);
+            this.wildcard.Name = "wildcard";
+            this.wildcard.Size = new System.Drawing.Size(48, 16);
+            this.wildcard.TabIndex = 20;
+            this.wildcard.Text = "x.x.x.x";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 120);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 13);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Wildcard:";
+            // 
             // chainb
             // 
             this.chainb.AutoSize = true;
             this.chainb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chainb.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.chainb.Location = new System.Drawing.Point(56, 239);
+            this.chainb.Location = new System.Drawing.Point(56, 263);
             this.chainb.Name = "chainb";
             this.chainb.Size = new System.Drawing.Size(48, 16);
             this.chainb.TabIndex = 18;
@@ -377,7 +435,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 239);
+            this.label20.Location = new System.Drawing.Point(6, 263);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 13);
             this.label20.TabIndex = 17;
@@ -388,7 +446,7 @@
             this.chaina.AutoSize = true;
             this.chaina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chaina.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.chaina.Location = new System.Drawing.Point(56, 216);
+            this.chaina.Location = new System.Drawing.Point(56, 240);
             this.chaina.Name = "chaina";
             this.chaina.Size = new System.Drawing.Size(48, 16);
             this.chaina.TabIndex = 16;
@@ -397,7 +455,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 216);
+            this.label19.Location = new System.Drawing.Point(6, 240);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 15;
@@ -408,7 +466,7 @@
             this.mbin.AutoSize = true;
             this.mbin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mbin.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.mbin.Location = new System.Drawing.Point(56, 192);
+            this.mbin.Location = new System.Drawing.Point(56, 216);
             this.mbin.Name = "mbin";
             this.mbin.Size = new System.Drawing.Size(48, 16);
             this.mbin.TabIndex = 13;
@@ -419,7 +477,7 @@
             this.ipbbin.AutoSize = true;
             this.ipbbin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipbbin.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.ipbbin.Location = new System.Drawing.Point(56, 167);
+            this.ipbbin.Location = new System.Drawing.Point(56, 191);
             this.ipbbin.Name = "ipbbin";
             this.ipbbin.Size = new System.Drawing.Size(48, 16);
             this.ipbbin.TabIndex = 12;
@@ -430,7 +488,7 @@
             this.ipabin.AutoSize = true;
             this.ipabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipabin.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.ipabin.Location = new System.Drawing.Point(56, 144);
+            this.ipabin.Location = new System.Drawing.Point(56, 168);
             this.ipabin.Name = "ipabin";
             this.ipabin.Size = new System.Drawing.Size(48, 16);
             this.ipabin.TabIndex = 11;
@@ -441,7 +499,7 @@
             this.snm.AutoSize = true;
             this.snm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snm.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.snm.Location = new System.Drawing.Point(56, 117);
+            this.snm.Location = new System.Drawing.Point(56, 141);
             this.snm.Name = "snm";
             this.snm.Size = new System.Drawing.Size(48, 16);
             this.snm.TabIndex = 10;
@@ -460,7 +518,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 192);
+            this.label16.Location = new System.Drawing.Point(6, 216);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 13);
             this.label16.TabIndex = 7;
@@ -469,7 +527,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 169);
+            this.label15.Location = new System.Drawing.Point(6, 193);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 13);
             this.label15.TabIndex = 6;
@@ -478,7 +536,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 144);
+            this.label13.Location = new System.Drawing.Point(6, 168);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 13);
             this.label13.TabIndex = 5;
@@ -487,7 +545,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 120);
+            this.label14.Location = new System.Drawing.Point(6, 144);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 13);
             this.label14.TabIndex = 4;
@@ -533,35 +591,25 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "IP A:";
             // 
-            // classc
+            // postfix_label
             // 
-            this.classc.Location = new System.Drawing.Point(69, 105);
-            this.classc.Name = "classc";
-            this.classc.Size = new System.Drawing.Size(24, 23);
-            this.classc.TabIndex = 17;
-            this.classc.Text = "C";
-            this.classc.UseVisualStyleBackColor = true;
-            this.classc.Click += new System.EventHandler(this.classc_Click);
+            this.postfix_label.AutoSize = true;
+            this.postfix_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postfix_label.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.postfix_label.Location = new System.Drawing.Point(56, 98);
+            this.postfix_label.Name = "postfix_label";
+            this.postfix_label.Size = new System.Drawing.Size(48, 16);
+            this.postfix_label.TabIndex = 22;
+            this.postfix_label.Text = "x.x.x.x";
             // 
-            // classb
+            // label21
             // 
-            this.classb.Location = new System.Drawing.Point(39, 105);
-            this.classb.Name = "classb";
-            this.classb.Size = new System.Drawing.Size(24, 23);
-            this.classb.TabIndex = 23;
-            this.classb.Text = "B";
-            this.classb.UseVisualStyleBackColor = true;
-            this.classb.Click += new System.EventHandler(this.classb_Click);
-            // 
-            // classa
-            // 
-            this.classa.Location = new System.Drawing.Point(9, 105);
-            this.classa.Name = "classa";
-            this.classa.Size = new System.Drawing.Size(24, 23);
-            this.classa.TabIndex = 24;
-            this.classa.Text = "A";
-            this.classa.UseVisualStyleBackColor = true;
-            this.classa.Click += new System.EventHandler(this.classa_Click);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 98);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Postfix:";
             // 
             // Form1
             // 
@@ -633,6 +681,10 @@
         private System.Windows.Forms.Button classa;
         private System.Windows.Forms.Button classb;
         private System.Windows.Forms.Button classc;
+        private System.Windows.Forms.Label wildcard;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label postfix_label;
+        private System.Windows.Forms.Label label21;
     }
 }
 
