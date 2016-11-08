@@ -1,5 +1,5 @@
 # binary-ip-culculator
-A simple binary culculator written in C# for school purpose <br>
+A simple binary calculator written in C# for school purpose <br>
 Current features: <br>
 => Subnet linting <br>
 => Convert ip adresses to Binary <br>
